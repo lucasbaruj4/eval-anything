@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skills help differently across task sets</title>
+<style>
+body{font-family:var(--font-sans,system-ui);color:var(--foreground);margin:0;line-height:1.5}h2{font-size:21px;margin:0 0 6px}p{margin:0 0 18px;color:var(--muted-foreground)}section{background:var(--card);border:1px solid var(--border);border-radius:var(--radius,12px);padding:16px;margin:12px 0}h3{font-size:17px;margin:0}small{display:block;color:var(--muted-foreground);margin-bottom:14px}.row{display:grid;grid-template-columns:102px 1fr 60px;align-items:center;gap:10px;margin:10px 0;font-size:14px}.track{height:22px;background:var(--secondary);border-radius:4px;overflow:hidden}.bar{height:100%;background:var(--chart-1,#779cfa);border-radius:4px}.baseline{background:var(--chart-2,#87cbb5)}.gain{font-weight:650;margin:16px 0 4px}.note{font-size:13px;margin:10px 0 0}a{color:var(--primary)}.axis{display:flex;justify-content:space-between;margin:0 70px 0 112px;font-size:11px;color:var(--muted-foreground)}
+</style>
+<h2>Skills help differently across task sets</h2>
+<p>Two separate studies. Different tasks, skills, and agent configurations. These are published results, not our experiments.</p>
+<section aria-label="SkillsBench v4 results">
+<h3>SkillsBench v4 · specialist tasks</h3>
+<small>87 tasks · 18 configurations · June 14, 2026</small>
+<div class="row"><span>Without skills</span><div class="track"><div class="bar baseline" style="width:33.9%"></div></div><strong>33.9%</strong></div>
+<div class="row"><span>With skills</span><div class="track"><div class="bar" style="width:50.5%"></div></div><strong>50.5%</strong></div>
+<div class="axis"><span>0%</span><span>Pass rate</span><span>100%</span></div>
+<div class="gain">Gain: 16.6 percentage points</div>
+<a href="https://arxiv.org/html/2602.12670v4">Source: SkillsBench, version 4</a>
+</section>
+<section aria-label="SWE-Skills-Bench v2 results">
+<h3>SWE-Skills-Bench v2 · public software skills</h3>
+<small>98 skills · 4 configurations · October 27, 2026</small>
+<div class="row"><span>Without skills</span><div class="track"><div class="bar baseline" style="width:76.59%"></div></div><strong>76.59%</strong></div>
+<div class="row"><span>With skills</span><div class="track"><div class="bar" style="width:76.93%"></div></div><strong>76.93%</strong></div>
+<div class="axis"><span>0%</span><span>Pass ratio</span><span>100%</span></div>
+<div class="gain">Gain: 0.34 percentage points</div>
+<a href="https://arxiv.org/html/2603.15401v2">Source: SWE-Skills-Bench, version 2, table 5</a>
+</section>
+<p class="note">Interpretation: measure a skill on its intended work. These averages do not predict its benefit in your project. Uncertainty intervals are not shown here.</p>
+</html>
