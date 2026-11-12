@@ -2,7 +2,7 @@
 
 This file guides repository development. Keep product behavior in product documents and runtime instructions.
 
-Explore how to evaluate AI outputs, skills, and agents, including subjective quality. This project is in research. No implementation is selected.
+Explore how to evaluate AI outputs, skills, and agents, including subjective quality. The first implementation is an installable skill for text comparisons.
 
 ## Research
 
@@ -24,9 +24,14 @@ docs/
   research/                 Research and source notes
 skills/
   eval-anything/
-    SKILL.md                Instructions users install (planned)
-    scripts/                Supporting code (optional)
+    SKILL.md                Instructions users install
+    agents/                 Invocation settings
+    references/             Detailed procedures
+    scripts/                Supporting code
+tests/                      Helper behavior tests
 ```
+
+Run helper tests with `python3 -m unittest discover -s tests` after changing skill scripts.
 
 ## Language
 
