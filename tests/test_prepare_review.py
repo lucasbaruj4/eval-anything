@@ -1,3 +1,26 @@
+"""Check the files produced by the anonymous text-review helper.
+
+Each test runs prepare_review.py with temporary input and output files.
+The input has a list of criteria and a list of pairs. Each pair contains
+one prompt and two outputs. Each output records its text, model label,
+and condition label, which identifies the skill version used.
+
+The helper produces review/pack.json with anonymous A/B outputs.
+Its separate private/key.json maps each item and A/B label back to the
+original pair, condition, and model. The tests check that:
+
+- Review copies preserve criteria, prompts, accents, and line breaks while
+  omitting identity labels and extra metadata.
+- The private key identifies every output correctly after shuffling.
+- Empty criteria are accepted so humans can express preferences first.
+- Invalid input, duplicate pair IDs, identical conditions, and mismatched
+  model labels are rejected without creating a review folder.
+- Existing review files are never overwritten.
+
+These tests use fixed text examples. They do not run agents, assess writing
+quality, or prove that output positions vary across runs.
+"""
+
 import copy
 import json
 from pathlib import Path
