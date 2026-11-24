@@ -34,6 +34,12 @@ tests/                      Helper behavior tests
 
 Run helper tests with `python3 -m unittest discover -s tests` after changing skill scripts.
 
+## Agent skills
+
+### Issue tracker
+
+Read [the local issue tracker guide](docs/agents/issue-tracker.md) when reading or writing specs and tickets.
+
 ## Language
 
 - Avoid unnecessarily complex language, for example instead of using words like "deck" use words like "presentation".
